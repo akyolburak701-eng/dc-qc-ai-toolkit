@@ -22,4 +22,6 @@ Shows a Pareto chart of defect types, first-pass rate, and trends by trade and w
 
 ![QC Dashboard](dashboard.png)
 
-## Run it yourself
+
+
+<img width="1486" height="792" alt="image" src="https://github.com/user-attachments/assets/04592128-0ee4-4b57-808d-b56b36573d6b" />
