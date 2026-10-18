@@ -1,27 +1,25 @@
 # Data Center QC AI Toolkit
 
-Three prototype AI tools for data center quality control, built with Streamlit and the Claude API.
+Three prototype AI tools for data center quality control, built with Python, Streamlit, and the Claude API.
 
 ## Problem
-QC managers lose hours to repetitive paperwork and manual trend analysis. These tools cut that time and make recurring issues visible.
+QC managers spend hours on repetitive paperwork and manual trend analysis. These tools speed up the paperwork and make recurring issues easier to see.
 
 ## Tools
-1. **NCR Drafter** - rough field notes into a formal non-conformance report (root cause, corrective action, verification).
-2. **Photo Defect Spotter** - site photo into a structured draft punch list with severity and confidence.
-3. **QC Dashboard** - Pareto chart, first-pass rate, trade/area trends, and an AI-written weekly summary (synthetic data).
 
-## Run it
-```
-pip install -r requirements.txt
-export ANTHROPIC_API_KEY=your_key   # Windows: set ANTHROPIC_API_KEY=your_key
-streamlit run app.py
-```
-Optional: `CLAUDE_MODEL` env var to switch models.
+### 1. NCR Drafter
+Turns rough field notes into a formal non-conformance report: severity, probable root cause, corrective and preventive action, and a verification method. It lists missing details under "Info Needed" instead of inventing them.
 
-## Results (fill in after testing)
-- NCR drafting time: ~__ min manual vs ~__ min with tool (n=__ test notes)
-- Photo spotter: caught __ of __ planted defects in __ test images
+![NCR Drafter](ncr.png)
 
-## Notes
-- Uses synthetic and public data only; no confidential employer or client material.
-- AI output is a draft for human verification, not a replacement for inspection judgment.
+### 2. Photo Defect Spotter
+Takes a site photo and returns a draft punch list with severity and confidence for each item. It also lists what it could not assess from the photo.
+
+![Photo Defect Spotter](photo.png)
+
+### 3. QC Dashboard
+Shows a Pareto chart of defect types, first-pass rate, and trends by trade and week, then writes a weekly summary with recommended actions. Uses synthetic data.
+
+![QC Dashboard](dashboard.png)
+
+## Run it yourself
