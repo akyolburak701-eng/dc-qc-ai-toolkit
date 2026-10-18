@@ -22,6 +22,15 @@ Shows a Pareto chart of defect types, first-pass rate, and trends by trade and w
 
 ![QC Dashboard](dashboard.png)
 
+## Run it yourself
+Install Python, then open a command window in the project folder and type these three lines one at a time:
 
+    pip install -r requirements.txt
+    set ANTHROPIC_API_KEY=your_key
+    python -m streamlit run app.py
 
-<img width="1486" height="792" alt="image" src="https://github.com/user-attachments/assets/04592128-0ee4-4b57-808d-b56b36573d6b" />
+On Mac or Linux, use `export ANTHROPIC_API_KEY=your_key` instead of `set`.
+
+## Notes
+- Uses synthetic and public data only. No confidential employer or client material.
+- AI output is a draft for a human inspector to verify. It does not replace inspection judgment.
